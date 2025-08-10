@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PrimeVerse Stories</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>PrimeVerse</h1>
+    <p>Your multiverse archive</p>
+  </header>
+
+  <main>
+    <aside class="story-list">
+      <h2>Stories</h2>
+      <ul>
+        <li onclick="loadStory('magnus')">Magnus Prime Awakening</li>
+        <li onclick="loadStory('anoan')">Shadow Echo: Anoan</li>
+        <li onclick="loadStory('nishan')">Nishan, Lord of Earth</li>
+      </ul>
+    </aside>
+
+    <section class="story-content" id="storyContent">
+      <h2>Welcome to PrimeVerse</h2>
+      <p>Select a story from the left to begin reading.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 PrimeVerse Multiverse</p>
+  </footer>
+
+  <script>
+    const stories = {
+      magnus: {
+        title: "Magnus Prime Awakening",
+        content: "Born in a normal universe as a baby, but possessing near-omnipotent powers..."
+      },
+      anoan: {
+        title: "Shadow Echo: Anoan",
+        content: "A paradoxical dark reflection born from the core of Magnus’ existence..."
+      },
+      nishan: {
+        title: "Nishan, Lord of Earth",
+        content: "Once a mortal from Scotland, Nishan’s destiny changed after an event on another planet..."
+      }
+    };
+
+    function loadStory(key) {
+      const story = stories[key];
+      document.getElementById("storyContent").innerHTML = `
+        <h2>${story.title}</h2>
+        <p>${story.content}</p>
+      `;
+    }
+  </script>
+</body>
+</html>
