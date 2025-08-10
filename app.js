@@ -5,5 +5,5 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       loadingScreen.style.display = 'none';
     }, 1000); // wait for fade-out
-  }, 3000); // show for 3 seconds
+  }, 1500); // show for 1.5 seconds
 });
