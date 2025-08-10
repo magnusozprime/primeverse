@@ -1,3 +1,6 @@
+body{
+  background-color: red;
+}
 #loading-screen {
   position: fixed;
   top: 0;
